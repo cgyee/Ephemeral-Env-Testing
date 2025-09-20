@@ -1,0 +1,5 @@
+services:
+  web:
+    image: yee2k/bunapp:latest
+    ports:
+      - "3000:3000"
