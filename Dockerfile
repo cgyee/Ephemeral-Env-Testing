@@ -5,13 +5,13 @@ FROM oven/bun:latest
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY package*.json .
+
+# Copy the rest of the application code
+COPY index.ts .
 
 # Install application dependencies
 RUN bun install
-
-# Copy the rest of the application code
-COPY . .
 
 # Expose the port your application runs on
 EXPOSE 3000
